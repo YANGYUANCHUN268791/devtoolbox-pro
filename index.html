@@ -3,8 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DevToolBox Pro - Premium Developer Tools & AI Resources</title>
-<meta name="description" content="Premium developer tools, AI prompt collections, and coding resources.">
+<title>DevToolBox Pro - 15+ Free Online Developer Tools | JSON Formatter, Base64, UUID Generator</title>
+<meta name="description" content="Free online developer tools: JSON formatter, Base64 encode/decode, UUID generator, URL encoder, CSV converter, HTML escaper, timestamp converter and more. 15+ tools, one page, zero dependencies.">
+<meta name="keywords" content="developer tools, JSON formatter, Base64 encode, UUID generator, online tools, programming utilities, dev toolbox">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yangyuanchun268791.github.io/devtoolbox-pro/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="DevToolBox Pro - 15+ Free Developer Tools Online">
+<meta property="og:description" content="Free online developer tools: JSON, Base64, UUID, CSV, timestamps and more. 15+ tools in one place.">
+<meta property="og:url" content="https://yangyuanchun268791.github.io/devtoolbox-pro/">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DevToolBox Pro - Developer Tools">
+<meta name="twitter:description" content="15+ free developer tools online. JSON, Base64, UUID, CSV and more.">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "DevToolBox Pro",
+  "description": "15+ free online developer tools",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "All",
+  "offers": {
+    "@type": "Offer",
+    "price": "199",
+    "priceCurrency": "CNY"
+  }
+}
+</script>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a1a;color:#e2e8f0;line-height:1.6}
@@ -14,7 +46,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .hero .offer{display:inline-block;margin-top:20px;padding:8px 24px;background:#05966920;border:1px solid #059669;border-radius:20px;color:#34d399;font-size:14px}
 .container{max-width:1100px;margin:0 auto;padding:40px 20px}
 .section-title{font-size:28px;font-weight:700;margin-bottom:30px;text-align:center}
-.section-title span{background:linear-gradient(90deg,#38bdf8,#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-bottom:40px}
 .card{background:#1e293b;border-radius:12px;border:1px solid #334155;overflow:hidden;transition:all .3s}
 .card:hover{transform:translateY(-4px);border-color:#38bdf8;box-shadow:0 8px 24px rgba(56,189,248,.15)}
@@ -32,163 +63,115 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .btn-primary:hover{opacity:.9;transform:translateY(-1px)}
 .btn-bundle{background:linear-gradient(90deg,#059669,#2563eb);color:#fff;padding:14px 32px;font-size:16px}
 .btn-bundle:hover{opacity:.9;transform:translateY(-2px)}
-.btn-outline{background:transparent;border:1px solid #475569;color:#cbd5e1}
-.btn-outline:hover{border-color:#38bdf8;color:#38bdf8}
 .bundle-section{background:linear-gradient(135deg,#0f172a,#1e1b4b,#0f172a);border:1px solid #059669;border-radius:16px;padding:40px;text-align:center;margin:40px 0}
 .bundle-section h2{font-size:30px;margin-bottom:8px}
 .big-price{font-size:48px;font-weight:800;color:#34d399;margin:16px 0}
 .save{display:inline-block;padding:4px 16px;background:#dc262620;border:1px solid #dc2626;border-radius:12px;color:#f87171;font-size:13px}
+.tool-demo{background:#111827;border:1px solid #1e293b;border-radius:12px;padding:20px;margin:30px 0}
+.tool-demo h3{font-size:20px;margin-bottom:16px;color:#f1f5f9}
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:20px 0}
+.tool-tag{background:#1e293b;border:1px solid #334155;border-radius:6px;padding:8px 12px;text-align:center;font-size:13px;color:#94a3b8}
 .contact-section{text-align:center;padding:40px 20px;border-top:1px solid #1e293b}
 .contact-info{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:24px;display:inline-block;text-align:left}
 .contact-info p{padding:4px 0;font-size:14px;color:#94a3b8}
 .contact-info strong{color:#e2e8f0}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:40px 0}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:30px 0}
 .step{text-align:center;padding:20px}
 .step-num{width:40px;height:40px;border-radius:20px;background:#2563eb;color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-weight:700}
-.how-title{font-size:24px;font-weight:700;margin:40px 0 24px;text-align:center}
-.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:1000;align-items:center;justify-content:center}
-.modal.show{display:flex}
-.modal-content{background:#1e293b;border:1px solid #38bdf8;border-radius:12px;padding:32px;max-width:500px;width:90%;max-height:90vh;overflow-y:auto}
-.modal-content h2{font-size:22px;margin-bottom:16px;color:#38bdf8}
-.modal-content .close{float:right;font-size:24px;cursor:pointer;color:#64748b;background:none;border:none}
-.modal-content .close:hover{color:#e2e8f0}
-.modal-content .detail-row{padding:8px 0;border-bottom:1px solid #334155}
-.modal-content .detail-row:last-child{border-bottom:none}
-.modal-content .detail-label{font-weight:600;font-size:14px;color:#94a3b8}
-.modal-content .detail-value{font-size:14px;color:#e2e8f0}
-.copy-btn{background:#2563eb;color:#fff;border:none;padding:6px 12px;border-radius:4px;cursor:pointer;font-size:12px;margin-left:8px}
-footer{text-align:center;padding:20px;color:#64748b;font-size:12px}
+footer{text-align:center;padding:20px;color:#64748b;font-size:12px;border-top:1px solid #1e293b}
 @media(max-width:768px){.hero h1{font-size:28px}.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-
 <div class="hero">
-<h1>Premium Developer Tools & Resources</h1>
-<p>Handcrafted digital products to supercharge your development workflow, boost productivity, and master AI.</p>
-<div class="offer">Launch Special: 20% OFF First Week</div>
+<h1>DevToolBox Pro — 15+ Developer Tools</h1>
+<p>Free online developer utilities: JSON formatter, Base64 encoder, UUID generator, CSV converter, HTML escaper, timestamp tool and more. All in one place, zero dependencies.</p>
+<div class="offer">Launch Special: 20% OFF This Week</div>
 </div>
 
 <div class="container">
-<h2 class="section-title"><span>Our Products</span></h2>
+<div class="tool-demo">
+<h3>Available Tools</h3>
+<div class="tool-grid">
+<span class="tool-tag">JSON Formatter</span><span class="tool-tag">JSON Minifier</span>
+<span class="tool-tag">Base64 Encode</span><span class="tool-tag">Base64 Decode</span>
+<span class="tool-tag">URL Encode</span><span class="tool-tag">URL Decode</span>
+<span class="tool-tag">UUID Generator</span><span class="tool-tag">String Statistics</span>
+<span class="tool-tag">Timestamp Converter</span><span class="tool-tag">HTML Escape</span>
+<span class="tool-tag">HTML Unescape</span><span class="tool-tag">CSV to JSON</span>
+<span class="tool-tag">JSON to CSV</span><span class="tool-tag">Hex Encode</span>
+<span class="tool-tag">Hex Decode</span>
+</div>
+</div>
+
+<h2 class="section-title">Products</h2>
 <div class="grid">
-
-<div class="card">
-<div class="card-body">
+<div class="card"><div class="card-body">
 <div class="card-icon" style="background:#2563eb20">🤖</div>
-<h3>AI Prompt Mastery Collection</h3>
-<p>500+ premium, battle-tested prompts across 8 categories.</p>
-<ul class="features">
-<li>120+ Coding & Development prompts</li>
-<li>100+ Content Creation prompts</li>
-<li>60+ Design prompts</li>
-<li>80+ Business Analysis prompts</li>
-</ul>
+<h3>AI Prompt Mastery Collection</h3><p>500+ premium prompts across 8 categories.</p>
+<ul class="features"><li>120+ Coding prompts</li><li>100+ Content prompts</li><li>60+ Design prompts</li><li>80+ Business prompts</li></ul>
 <div class="price">99 <s>129</s></div>
-<a class="btn btn-primary" href="mailto:cao63571@gmail.com?subject=I want to buy AI Prompt Mastery (99 RMB)&body=I want to purchase AI Prompt Mastery Collection for 99 RMB via Alipay.">Buy Now - Email Me</a>
-</div>
-</div>
+<a class="btn btn-primary" href="mailto:cao63571@gmail.com?subject=Buy%3A%20AI%20Prompt%20Mastery%20(99RMB)&body=I%20want%20to%20buy%20AI%20Prompt%20Mastery%20Collection%20for%2099%20RMB%20via%20Alipay.">Buy Now</a>
+</div></div>
 
-<div class="card">
-<div class="card-body">
+<div class="card"><div class="card-body">
 <div class="card-icon" style="background:#05966920">🔧</div>
-<h3>DevToolBox Pro</h3>
-<p>15+ developer tools in a single HTML file. Zero dependencies, works offline.</p>
-<ul class="features">
-<li>JSON Formatter & Validator</li>
-<li>Base64, URL, Hex, HTML tools</li>
-<li>UUID Generator (bulk)</li>
-<li>Timestamp & Color Converter</li>
-<li>CSV-JSON bidirectional</li>
-</ul>
+<h3>DevToolBox Pro</h3><p>15+ dev tools, single HTML file, zero deps.</p>
+<ul class="features"><li>JSON, Base64, URL, Hex tools</li><li>UUID Generator (bulk)</li><li>Timestamp Converter</li><li>CSV-JSON bidirectional</li></ul>
 <div class="price">199 <s>249</s></div>
-<a class="btn btn-primary" href="mailto:cao63571@gmail.com?subject=I want to buy DevToolBox Pro (199 RMB)&body=I want to purchase DevToolBox Pro for 199 RMB via Alipay.">Buy Now - Email Me</a>
-</div>
-</div>
+<a class="btn btn-primary" href="mailto:cao63571@gmail.com?subject=Buy%3A%20DevToolBox%20Pro%20(199RMB)&body=I%20want%20to%20buy%20DevToolBox%20Pro%20for%20199%20RMB%20via%20Alipay.">Buy Now</a>
+</div></div>
 
-<div class="card">
-<div class="card-body">
+<div class="card"><div class="card-body">
 <div class="card-icon" style="background:#7c3aed20">⚡</div>
-<h3>Node.js Backend Starter Kit</h3>
-<p>Production-ready backend boilerplate with auth, DB, and more.</p>
-<ul class="features">
-<li>JWT auth (access + refresh tokens)</li>
-<li>RBAC permission system</li>
-<li>PostgreSQL + Redis integration</li>
-<li>Docker + CI/CD ready</li>
-<li>Swagger/OpenAPI docs</li>
-</ul>
+<h3>Backend Starter Kit</h3><p>Node.js production backend boilerplate.</p>
+<ul class="features"><li>JWT auth + RBAC</li><li>PostgreSQL + Redis</li><li>Docker + CI/CD</li><li>Swagger docs</li></ul>
 <div class="price">199 <s>299</s></div>
-<a class="btn btn-primary" href="mailto:cao63571@gmail.com?subject=I want to buy Backend Starter Kit (199 RMB)&body=I want to purchase Backend Starter Kit for 199 RMB via Alipay.">Buy Now - Email Me</a>
-</div>
-</div>
+<a class="btn btn-primary" href="mailto:cao63571@gmail.com?subject=Buy%3A%20Backend%20Kit%20(199RMB)&body=I%20want%20to%20buy%20Backend%20Starter%20Kit%20for%20199%20RMB%20via%20Alipay.">Buy Now</a>
+</div></div>
 
-<div class="card">
-<div class="card-body">
+<div class="card"><div class="card-body">
 <div class="card-icon" style="background:#d9770620">🌐</div>
-<h3>Chrome Extension Pack</h3>
-<p>5 ready-to-use Chrome extensions (MV3).</p>
-<ul class="features">
-<li>Page Screenshot Pro</li>
-<li>Dev Color Picker</li>
-<li>Focus Guardian + Pomodoro</li>
-<li>Quick Notes + Tab Manager</li>
-<li>Chrome Web Store ready</li>
-</ul>
+<h3>Chrome Extension Pack</h3><p>5 MV3 extensions ready to use.</p>
+<ul class="features"><li>Screenshot Pro</li><li>Color Picker</li><li>Focus Guardian</li><li>Quick Notes</li><li>Tab Manager</li></ul>
 <div class="price">129 <s>159</s></div>
-<a class="btn btn-primary" href="mailto:cao63571@gmail.com?subject=I want to buy Chrome Extension Pack (129 RMB)&body=I want to purchase Chrome Extension Pack for 129 RMB via Alipay.">Buy Now - Email Me</a>
-</div>
-</div>
+<a class="btn btn-primary" href="mailto:cao63571@gmail.com?subject=Buy%3A%20Chrome%20Pack%20(129RMB)&body=I%20want%20to%20buy%20Chrome%20Extension%20Pack%20for%20129%20RMB%20via%20Alipay.">Buy Now</a>
+</div></div>
 
-<div class="card">
-<div class="card-body">
+<div class="card"><div class="card-body">
 <div class="card-icon" style="background:#dc262620">📜</div>
-<h3>Automation Scripts Bundle</h3>
-<p>30+ automation scripts for data processing, file management, networking, and dev tasks.</p>
-<ul class="features">
-<li>8 Data Processing scripts</li>
-<li>7 File Management scripts</li>
-<li>6 Network Tool scripts</li>
-<li>5 Development scripts</li>
-<li>5 Utility scripts</li>
-</ul>
+<h3>Automation Scripts</h3><p>30+ scripts: data, files, network, dev.</p>
+<ul class="features"><li>8 Data scripts</li><li>7 File scripts</li><li>6 Network scripts</li><li>5 Dev scripts</li></ul>
 <div class="price">79 <s>99</s></div>
-<a class="btn btn-primary" href="mailto:cao63571@gmail.com?subject=I want to buy Automation Scripts (79 RMB)&body=I want to purchase Automation Scripts Bundle for 79 RMB via Alipay.">Buy Now - Email Me</a>
-</div>
-</div>
-
+<a class="btn btn-primary" href="mailto:cao63571@gmail.com?subject=Buy%3A%20Automation%20Scripts%20(79RMB)&body=I%20want%20to%20buy%20Automation%20Scripts%20Bundle%20for%2079%20RMB%20via%20Alipay.">Buy Now</a>
+</div></div>
 </div>
 
 <div class="bundle-section">
 <h2>Complete Bundle</h2>
-<p>Get ALL 5 products at an unbeatable price</p>
+<p>All 5 products — best value</p>
 <div class="big-price">499</div>
 <p style="color:#94a3b8">Save 206 (29% off!)</p>
-<div class="save">Best Value</div>
-<br><br>
-<a class="btn btn-bundle" href="mailto:cao63571@gmail.com?subject=I want to buy the Complete Bundle (499 RMB)&body=I want to purchase all 5 products (Bundle) for 499 RMB via Alipay.">Get the Bundle - Email Me</a>
+<div class="save">Best Value</div><br><br>
+<a class="btn btn-bundle" href="mailto:cao63571@gmail.com?subject=Buy%3A%20Complete%20Bundle%20(499RMB)&body=I%20want%20to%20buy%20all%205%20products%20Bundle%20for%20499%20RMB%20via%20Alipay.">Buy Bundle</a>
 </div>
 
-<h2 class="section-title"><span>How to Buy</span></h2>
+<h2 class="section-title">How to Buy</h2>
 <div class="steps">
-<div class="step"><div class="step-num">1</div><h4>Choose Product</h4><p>Browse and pick what you need</p></div>
-<div class="step"><div class="step-num">2</div><h4>Click "Email Me"</h4><p>Auto-generates an email with product details</p></div>
-<div class="step"><div class="step-num">3</div><h4>Pay via Alipay</h4><p>Send payment to cao63571@gmail.com</p></div>
-<div class="step"><div class="step-num">4</div><h4>Get Delivered</h4><p>Receive your files by email within 2 hours</p></div>
+<div class="step"><div class="step-num">1</div><h4>Choose Product</h4><p>Browse and select</p></div>
+<div class="step"><div class="step-num">2</div><h4>Click Buy</h4><p>Email with order details</p></div>
+<div class="step"><div class="step-num">3</div><h4>Pay via Alipay</h4><p>Send to cao63571@gmail.com</p></div>
+<div class="step"><div class="step-num">4</div><h4>Get Delivered</h4><p>Files by email within 2h</p></div>
+</div>
+
+<div style="text-align:center;padding:20px;color:#94a3b8;font-size:14px">
+<p>Questions? Email: <strong>cao63571@gmail.com</strong> | Alipay: same email</p>
 </div>
 </div>
 
-<div class="contact-section">
-<div class="contact-info">
-<p><strong>Email:</strong> cao63571@gmail.com</p>
-<p><strong>Alipay:</strong> cao63571@gmail.com</p>
-<p><strong>Response:</strong> Within 2 hours</p>
-<p><strong>GitHub:</strong> github.com/YANGYUANCHUN268791/devtoolbox-pro</p>
-</div>
-<br>
-<p style="color:#64748b;font-size:13px;margin-top:20px">Satisfaction guaranteed or your money back</p>
-</div>
-
-<footer>DevToolBox Pro 2026 | Built with passion for developers worldwide</footer>
+<footer>
+DevToolBox Pro 2026 | Built for developers | 
+<a href="https://github.com/YANGYUANCHUN268791/devtoolbox-pro" style="color:#38bdf8">GitHub</a>
+</footer>
 </body>
 </html>
