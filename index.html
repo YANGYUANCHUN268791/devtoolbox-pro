@@ -1,13 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DevTools Pro - Premium Developer Tools & AI Resources</title>
-<meta name="description" content="Premium developer tools, AI prompt collections, and coding resources. Boost your productivity with our handcrafted digital products.">
+<title>DevToolBox Pro - Premium Developer Tools & AI Resources</title>
+<meta name="description" content="Premium developer tools, AI prompt collections, and coding resources.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:#0a0a1a;color:#e2e8f0;line-height:1.6}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a1a;color:#e2e8f0;line-height:1.6}
 .hero{background:linear-gradient(135deg,#0f172a,#1e1b4b);padding:60px 20px;text-align:center;border-bottom:1px solid #1e293b}
 .hero h1{font-size:42px;font-weight:800;background:linear-gradient(90deg,#38bdf8,#a78bfa,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:12px}
 .hero p{font-size:18px;color:#94a3b8;max-width:600px;margin:0 auto}
@@ -22,38 +22,51 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
 .card-icon{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:12px}
 .card h3{font-size:18px;font-weight:600;margin-bottom:8px}
 .card p{color:#94a3b8;font-size:14px;margin-bottom:12px}
-.card .features{list-style:none;padding:0}
-.card .features li{padding:4px 0;font-size:13px;color:#cbd5e1}
-.card .features li:before{content:"\2713 ";color:#34d399}
+.features{list-style:none;padding:0}
+.features li{padding:4px 0;font-size:13px;color:#cbd5e1}
+.features li:before{content:"\2713 ";color:#34d399}
 .price{font-size:24px;font-weight:700;color:#38bdf8;margin:12px 0}
 .price s{font-size:16px;color:#64748b;margin-left:8px}
-.btn{display:inline-block;padding:10px 24px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;transition:all .2s;cursor:pointer;border:none}
+.btn{display:inline-block;padding:10px 24px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;transition:all .2s;cursor:pointer;border:none;text-align:center}
 .btn-primary{background:linear-gradient(90deg,#2563eb,#7c3aed);color:#fff}
 .btn-primary:hover{opacity:.9;transform:translateY(-1px)}
 .btn-bundle{background:linear-gradient(90deg,#059669,#2563eb);color:#fff;padding:14px 32px;font-size:16px}
 .btn-bundle:hover{opacity:.9;transform:translateY(-2px)}
+.btn-outline{background:transparent;border:1px solid #475569;color:#cbd5e1}
+.btn-outline:hover{border-color:#38bdf8;color:#38bdf8}
 .bundle-section{background:linear-gradient(135deg,#0f172a,#1e1b4b,#0f172a);border:1px solid #059669;border-radius:16px;padding:40px;text-align:center;margin:40px 0}
 .bundle-section h2{font-size:30px;margin-bottom:8px}
-.bundle-section .big-price{font-size:48px;font-weight:800;color:#34d399;margin:16px 0}
-.bundle-section .save{display:inline-block;padding:4px 16px;background:#dc262620;border:1px solid #dc2626;border-radius:12px;color:#f87171;font-size:13px}
+.big-price{font-size:48px;font-weight:800;color:#34d399;margin:16px 0}
+.save{display:inline-block;padding:4px 16px;background:#dc262620;border:1px solid #dc2626;border-radius:12px;color:#f87171;font-size:13px}
 .contact-section{text-align:center;padding:40px 20px;border-top:1px solid #1e293b}
-.contact-section .contact-info{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:24px;display:inline-block;text-align:left}
-.contact-section .contact-info p{padding:4px 0;font-size:14px;color:#94a3b8}
-.contact-section .contact-info strong{color:#e2e8f0}
+.contact-info{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:24px;display:inline-block;text-align:left}
+.contact-info p{padding:4px 0;font-size:14px;color:#94a3b8}
+.contact-info strong{color:#e2e8f0}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:40px 0}
 .step{text-align:center;padding:20px}
 .step-num{width:40px;height:40px;border-radius:20px;background:#2563eb;color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-weight:700}
-.step h4{font-size:16px;margin-bottom:4px}
-.step p{font-size:13px;color:#94a3b8}
+.how-title{font-size:24px;font-weight:700;margin:40px 0 24px;text-align:center}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:1000;align-items:center;justify-content:center}
+.modal.show{display:flex}
+.modal-content{background:#1e293b;border:1px solid #38bdf8;border-radius:12px;padding:32px;max-width:500px;width:90%;max-height:90vh;overflow-y:auto}
+.modal-content h2{font-size:22px;margin-bottom:16px;color:#38bdf8}
+.modal-content .close{float:right;font-size:24px;cursor:pointer;color:#64748b;background:none;border:none}
+.modal-content .close:hover{color:#e2e8f0}
+.modal-content .detail-row{padding:8px 0;border-bottom:1px solid #334155}
+.modal-content .detail-row:last-child{border-bottom:none}
+.modal-content .detail-label{font-weight:600;font-size:14px;color:#94a3b8}
+.modal-content .detail-value{font-size:14px;color:#e2e8f0}
+.copy-btn{background:#2563eb;color:#fff;border:none;padding:6px 12px;border-radius:4px;cursor:pointer;font-size:12px;margin-left:8px}
 footer{text-align:center;padding:20px;color:#64748b;font-size:12px}
 @media(max-width:768px){.hero h1{font-size:28px}.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+
 <div class="hero">
 <h1>Premium Developer Tools & Resources</h1>
 <p>Handcrafted digital products to supercharge your development workflow, boost productivity, and master AI.</p>
-<div class="offer">Launch Offer: 20% OFF First Week</div>
+<div class="offer">Launch Special: 20% OFF First Week</div>
 </div>
 
 <div class="container">
@@ -70,10 +83,9 @@ footer{text-align:center;padding:20px;color:#64748b;font-size:12px}
 <li>100+ Content Creation prompts</li>
 <li>60+ Design prompts</li>
 <li>80+ Business Analysis prompts</li>
-<li>Bi-weekly updates included</li>
 </ul>
 <div class="price">99 <s>129</s></div>
-<button class="btn btn-primary" onclick="alert('Contact: cao63571@gmail.com to purchase')">Buy Now</button>
+<a class="btn btn-primary" href="mailto:cao63571@gmail.com?subject=I want to buy AI Prompt Mastery (99 RMB)&body=I want to purchase AI Prompt Mastery Collection for 99 RMB via Alipay.">Buy Now - Email Me</a>
 </div>
 </div>
 
@@ -90,7 +102,7 @@ footer{text-align:center;padding:20px;color:#64748b;font-size:12px}
 <li>CSV-JSON bidirectional</li>
 </ul>
 <div class="price">199 <s>249</s></div>
-<button class="btn btn-primary" onclick="alert('Contact: cao63571@gmail.com to purchase')">Buy Now</button>
+<a class="btn btn-primary" href="mailto:cao63571@gmail.com?subject=I want to buy DevToolBox Pro (199 RMB)&body=I want to purchase DevToolBox Pro for 199 RMB via Alipay.">Buy Now - Email Me</a>
 </div>
 </div>
 
@@ -107,7 +119,7 @@ footer{text-align:center;padding:20px;color:#64748b;font-size:12px}
 <li>Swagger/OpenAPI docs</li>
 </ul>
 <div class="price">199 <s>299</s></div>
-<button class="btn btn-primary" onclick="alert('Contact: cao63571@gmail.com to purchase')">Buy Now</button>
+<a class="btn btn-primary" href="mailto:cao63571@gmail.com?subject=I want to buy Backend Starter Kit (199 RMB)&body=I want to purchase Backend Starter Kit for 199 RMB via Alipay.">Buy Now - Email Me</a>
 </div>
 </div>
 
@@ -115,7 +127,7 @@ footer{text-align:center;padding:20px;color:#64748b;font-size:12px}
 <div class="card-body">
 <div class="card-icon" style="background:#d9770620">🌐</div>
 <h3>Chrome Extension Pack</h3>
-<p>5 ready-to-use Chrome extensions (MV3). Screenshot, color picker, focus, notes, tab manager.</p>
+<p>5 ready-to-use Chrome extensions (MV3).</p>
 <ul class="features">
 <li>Page Screenshot Pro</li>
 <li>Dev Color Picker</li>
@@ -124,7 +136,7 @@ footer{text-align:center;padding:20px;color:#64748b;font-size:12px}
 <li>Chrome Web Store ready</li>
 </ul>
 <div class="price">129 <s>159</s></div>
-<button class="btn btn-primary" onclick="alert('Contact: cao63571@gmail.com to purchase')">Buy Now</button>
+<a class="btn btn-primary" href="mailto:cao63571@gmail.com?subject=I want to buy Chrome Extension Pack (129 RMB)&body=I want to purchase Chrome Extension Pack for 129 RMB via Alipay.">Buy Now - Email Me</a>
 </div>
 </div>
 
@@ -141,7 +153,7 @@ footer{text-align:center;padding:20px;color:#64748b;font-size:12px}
 <li>5 Utility scripts</li>
 </ul>
 <div class="price">79 <s>99</s></div>
-<button class="btn btn-primary" onclick="alert('Contact: cao63571@gmail.com to purchase')">Buy Now</button>
+<a class="btn btn-primary" href="mailto:cao63571@gmail.com?subject=I want to buy Automation Scripts (79 RMB)&body=I want to purchase Automation Scripts Bundle for 79 RMB via Alipay.">Buy Now - Email Me</a>
 </div>
 </div>
 
@@ -154,31 +166,29 @@ footer{text-align:center;padding:20px;color:#64748b;font-size:12px}
 <p style="color:#94a3b8">Save 206 (29% off!)</p>
 <div class="save">Best Value</div>
 <br><br>
-<button class="btn btn-bundle" onclick="alert('Bundle purchase: Contact cao63571@gmail.com\nAll 5 products delivered immediately')">Get the Bundle</button>
+<a class="btn btn-bundle" href="mailto:cao63571@gmail.com?subject=I want to buy the Complete Bundle (499 RMB)&body=I want to purchase all 5 products (Bundle) for 499 RMB via Alipay.">Get the Bundle - Email Me</a>
 </div>
 
-<h2 class="section-title"><span>How It Works</span></h2>
+<h2 class="section-title"><span>How to Buy</span></h2>
 <div class="steps">
-<div class="step"><div class="step-num">1</div><h4>Choose Product</h4><p>Browse our collection and pick what you need</p></div>
-<div class="step"><div class="step-num">2</div><h4>Contact & Pay</h4><p>Email us or transfer via Alipay</p></div>
-<div class="step"><div class="step-num">3</div><h4>Get Delivered</h4><p>Receive your product files immediately</p></div>
-<div class="step"><div class="step-num">4</div><h4>Lifetime Updates</h4><p>Free updates and support</p></div>
+<div class="step"><div class="step-num">1</div><h4>Choose Product</h4><p>Browse and pick what you need</p></div>
+<div class="step"><div class="step-num">2</div><h4>Click "Email Me"</h4><p>Auto-generates an email with product details</p></div>
+<div class="step"><div class="step-num">3</div><h4>Pay via Alipay</h4><p>Send payment to cao63571@gmail.com</p></div>
+<div class="step"><div class="step-num">4</div><h4>Get Delivered</h4><p>Receive your files by email within 2 hours</p></div>
 </div>
 </div>
 
 <div class="contact-section">
 <div class="contact-info">
 <p><strong>Email:</strong> cao63571@gmail.com</p>
-<p><strong>Payment:</strong> Alipay (same email)</p>
+<p><strong>Alipay:</strong> cao63571@gmail.com</p>
 <p><strong>Response:</strong> Within 2 hours</p>
-<p><strong>Support:</strong> Lifetime included</p>
+<p><strong>GitHub:</strong> github.com/YANGYUANCHUN268791/devtoolbox-pro</p>
 </div>
 <br>
 <p style="color:#64748b;font-size:13px;margin-top:20px">Satisfaction guaranteed or your money back</p>
 </div>
 
-<footer>
-DevTools Pro 2026 | Built with passion for developers worldwide
-</footer>
+<footer>DevToolBox Pro 2026 | Built with passion for developers worldwide</footer>
 </body>
 </html>
