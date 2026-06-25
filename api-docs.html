@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevToolBox API Documentation - Free Developer Tools REST API</title>
+<meta name="description" content="DevToolBox API documentation. Free REST API for developer tools: JSON, Base64, UUID, CSV, hashing, timestamps and more.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0b0e17;color:#e2e8f0;line-height:1.6}
+.header{background:linear-gradient(135deg,#0f172a,#1e1b4b);padding:40px 20px;text-align:center;border-bottom:1px solid #1e293b}
+.header h1{font-size:32px;background:linear-gradient(90deg,#38bdf8,#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
+.container{max-width:900px;margin:0 auto;padding:30px 20px}
+h2{font-size:22px;margin:30px 0 16px;color:#f1f5f9}
+h3{font-size:17px;margin:20px 0 10px;color:#e2e8f0}
+code{background:#1e293b;padding:2px 6px;border-radius:4px;font-family:'Cascadia Code',monospace;font-size:13px;color:#38bdf8}
+pre{background:#0f172a;border:1px solid #1e293b;border-radius:8px;padding:16px;overflow-x:auto;margin:12px 0;font-size:13px}
+pre code{background:none;padding:0;color:#e2e8f0}
+.endpoint{background:#1e293b;border:1px solid #334155;border-radius:8px;padding:16px;margin:12px 0}
+.endpoint .method{display:inline-block;padding:2px 8px;border-radius:4px;font-weight:700;font-size:12px;margin-right:8px;color:#fff}
+.method-post{background:#059669}
+.method-get{background:#2563eb}
+.endpoint .url{font-family:monospace;font-size:14px;color:#38bdf8}
+.endpoint .desc{color:#94a3b8;font-size:13px;margin-top:4px}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}
+th{background:#1e293b;padding:8px 12px;text-align:left;color:#94a3b8;font-weight:600;border-bottom:1px solid #334155}
+td{padding:8px 12px;border-bottom:1px solid #1e293b}
+tr:hover{background:#1e293b40}
+.tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;margin:2px;background:#1e293b;border:1px solid #334155;color:#94a3b8}
+.footer{text-align:center;padding:20px;color:#64748b;font-size:12px;border-top:1px solid #1e293b}
+.buy-btn{display:inline-block;padding:12px 28px;background:linear-gradient(90deg,#059669,#2563eb);color:#fff;border-radius:8px;text-decoration:none;font-weight:600;margin:20px 0}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>DevToolBox API Documentation</h1>
+<p>Free REST API for developers · 15+ utility tools</p>
+</div>
+<div class="container">
+
+<h2>Base URL</h2>
+<pre><code>https://api.github.com/repos/YANGYUANCHUN268791/devtoolbox-api/contents/server.js</code></pre>
+<p style="color:#94a3b8;font-size:14px">Self-host the server, or use the hosted version (coming soon).</p>
+
+<h2>Authentication</h2>
+<p>Self-hosted version: No authentication required for local use.</p>
+<p>Pro API: Contact cao63571@gmail.com for API key.</p>
+
+<h2>Endpoints</h2>
+
+<div class="endpoint">
+<span class="method method-get">GET</span>
+<span class="url">/health</span>
+<p class="desc">Server health check</p>
+<pre><code>{"status":"ok","time":"2026-06-25T12:00:00.000Z","tools":15}</code></pre>
+</div>
+
+<div class="endpoint">
+<span class="method method-get">GET</span>
+<span class="url">/api/tools</span>
+<p class="desc">List all available tools with names and descriptions</p>
+</div>
+
+<div class="endpoint">
+<span class="method method-post">POST</span>
+<span class="url">/api/tool/:toolName</span>
+<p class="desc">Execute a tool. Request body: <code>{"input": "your input", "isPro": false}</code></p>
+</div>
+
+<h2>Available Tools</h2>
+<table>
+<tr><th>Tool ID</th><th>Name</th><th>Input Example</th></tr>
+<tr><td><code>json</code></td><td>JSON Formatter</td><td><code>{"test":123}</code></td></tr>
+<tr><td><code>jsonMin</code></td><td>JSON Minify</td><td><code>{"test":123}</code></td></tr>
+<tr><td><code>b64e</code></td><td>Base64 Encode</td><td><code>Hello World</code></td></tr>
+<tr><td><code>b64d</code></td><td>Base64 Decode</td><td><code>SGVsbG8=</code></td></tr>
+<tr><td><code>urlEncode</code></td><td>URL Encode</td><td><code>hello world</code></td></tr>
+<tr><td><code>urlDecode</code></td><td>URL Decode</td><td><code>hello+world</code></td></tr>
+<tr><td><code>uuid</code></td><td>UUID Generator</td><td><code>5</code> (count)</td></tr>
+<tr><td><code>stats</code></td><td>String Statistics</td><td><code>some text here</code></td></tr>
+<tr><td><code>ts</code></td><td>Timestamp Converter</td><td><code>1719300000</code></td></tr>
+<tr><td><code>htmlEscape</code></td><td>HTML Escape</td><td><code><div>test</div></code></td></tr>
+<tr><td><code>htmlUnescape</code></td><td>HTML Unescape</td><td><code>&lt;div&gt;</code></td></tr>
+<tr><td><code>csvJson</code></td><td>CSV to JSON</td><td><code>name,age\nAlice,30</code></td></tr>
+<tr><td><code>jsonCsv</code></td><td>JSON to CSV</td><td><code>[{"name":"Alice"}]</code></td></tr>
+<tr><td><code>hexEncode</code></td><td>Hex Encode</td><td><code>Hello</code></td></tr>
+<tr><td><code>hexDecode</code></td><td>Hex Decode</td><td><code>48656C6C6F</code></td></tr>
+</table>
+
+<h2>Example Usage</h2>
+<h3>cURL</h3>
+<pre><code>curl -X POST https://your-server.com/api/tool/json \
+  -H "Content-Type: application/json" \
+  -d '{"input": "{\"name\":\"test\"}"}'</code></pre>
+
+<h3>JavaScript</h3>
+<pre><code>const res = await fetch('https://your-server.com/api/tool/json', {
+  method: 'POST',
+  headers: {'Content-Type': 'application/json'},
+  body: JSON.stringify({input: '{"name":"test"}'})
+});
+const data = await res.json();
+console.log(data.result);</code></pre>
+
+<h3>Python</h3>
+<pre><code>import requests
+res = requests.post('https://your-server.com/api/tool/json', 
+  json={'input': '{"name":"test"}'})
+print(res.json()['result'])</code></pre>
+
+<h2>Pricing</h2>
+<div style="background:#1e293b;border:1px solid #334155;border-radius:12px;padding:24px;text-align:center;margin:20px 0">
+<h3 style="margin-bottom:8px">Self-Hosted</h3>
+<p style="color:#94a3b8;font-size:14px">Free and unlimited. Just clone the repo and run.</p>
+<br>
+<h3 style="margin-bottom:8px">Pro API Key</h3>
+<p style="color:#94a3b8;font-size:14px">199 RMB — Higher rate limits, priority support, SLA</p>
+<br>
+<h3 style="margin-bottom:8px">Enterprise</h3>
+<p style="color:#94a3b8;font-size:14px">499 RMB — Full source code, commercial license, custom deployment</p>
+<br>
+<a class="buy-btn" href="mailto:cao63571@gmail.com?subject=API%20Pro%20Purchase&body=I%20want%20to%20purchase%20Pro%20API%20access.">Contact to Purchase</a>
+</div>
+
+<h2>Support</h2>
+<p>Email: <strong>cao63571@gmail.com</strong></p>
+<p>GitHub: <a href="https://github.com/YANGYUANCHUN268791/devtoolbox-api" style="color:#38bdf8">github.com/YANGYUANCHUN268791/devtoolbox-api</a></p>
+</div>
+<div class="footer">DevToolBox Pro 2026 · Free Developer Tools API</div>
+</body>
+</html>
